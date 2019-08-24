@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <description>Exercice JSP de fil rouge</description>
+  <display-name>Exercice JSP-TAGS acces SGBD</display-name>
+
+
+     <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+ 
+    
+    <servlet>
+        <servlet-name>accesBDD</servlet-name>
+        <servlet-class>operation.Acces_operation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accesBDD</servlet-name>
+        <url-pattern>/MySQL_operation</url-pattern>
+     </servlet-mapping>
+    
+
+    
+    <servlet>
+        <servlet-name>accesBD</servlet-name>
+        <servlet-class>controler.Control_modif</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accesBD</servlet-name>
+        <url-pattern>/MySQL</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>Modif</servlet-name>
+        <servlet-class>view.Acces_form_modif</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Modif</servlet-name>
+        <url-pattern>/bonmodif</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Modif2</servlet-name>
+        <servlet-class>controler.Control_operation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Modif2</servlet-name>
+        <url-pattern>/operation2</url-pattern>
+    </servlet-mapping>
+      
+    <servlet>
+        <servlet-name>Virement</servlet-name>
+        <servlet-class>view.Acces_operation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Virement</servlet-name>
+        <url-pattern>/bonvirement</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+        <servlet>
+        <servlet-name>accesCompte</servlet-name>
+        <servlet-class>view.Acces_compte</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accesCompte</servlet-name>
+        <url-pattern>/bonCompte</url-pattern>
+    </servlet-mapping>
+    
+  
+  
+   <servlet>
+        <servlet-name>configuration</servlet-name>
+        <servlet-class>view.Acces_accueil</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>configuration</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+    
+    <security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Acces réservé aux auditeurs de IB</web-resource-name>
+        <url-pattern>/auth/*</url-pattern>
+        <http-method>GET</http-method>
+        <http-method>POST</http-method>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>conseiller</role-name>
+      </auth-constraint>
+    </security-constraint> 
+
+
+    <login-config>
+      <auth-method>FORM</auth-method>
+      <realm-name>GTM 2019</realm-name>
+      <form-login-config>
+        <form-login-page>/Identification.jsp</form-login-page>
+        <form-error-page>/view/error.jsp</form-error-page>
+      </form-login-config>
+    </login-config>
+
+    <security-role>
+      <role-name>conseiller</role-name>
+    </security-role>
+    
+</web-app>

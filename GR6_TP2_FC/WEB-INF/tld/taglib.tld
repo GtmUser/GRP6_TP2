@@ -1,0 +1,39 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <description>Librairie de tags pour cours CAP GEMINI</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>TagLibrairie</short-name>
+    <uri>/TagLibrairie</uri>
+    
+    
+    <tag>
+	<description>Fin de page</description>
+        <name>fin</name>
+	<tag-class>accueil.Fin</tag-class>
+	<body-content>empty</body-content>
+    </tag>
+    
+    <tag>
+	<description>contenu</description>
+        <name>contenu</name>
+	<tag-class>accueil.Acces</tag-class>
+	<body-content>empty</body-content>
+	<attribute>
+		<name>requete</name>
+	</attribute>
+    </tag> 
+    
+    <tag>
+	<description>contenu2</description>
+        <name>contenu2</name>
+	<tag-class>compte.Acces_compte</tag-class>
+	<body-content>empty</body-content>
+	<attribute>
+		<name>requete</name>
+	</attribute>
+    </tag>   
+    
+</taglib>
+

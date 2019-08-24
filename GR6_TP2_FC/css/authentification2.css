@@ -1,0 +1,145 @@
+@keyframes submitanimation {
+	0% {
+		background-color: yellow;
+	}
+	50% {
+		background-color: #00FFEC;
+	}
+	100% {
+		background-color: yellow;
+	}
+}
+
+@keyframes arcenciel {
+	0% {
+		background-color: purple;
+	}
+	14% {
+		background-color: blue;
+	}
+	29% {
+		background-color: #00FFEC;
+	}
+	43% {
+		background-color: green;
+	}
+	58% {
+		background-color: yellow;
+	}
+	72% {
+		background-color: orange;
+	}
+	84% {
+		background-color: #FF0000;
+	}
+	100% {
+		background-color: purple;
+	}
+}
+
+body {
+	background-color: #DEDB98;
+}
+
+h1 {
+	color: #60af3f;
+	font-size: 56px;
+	font-family: comic sans ms;
+	
+}
+
+#titre {
+	top: 100px;
+	border-style: solid;
+	text-align: center;
+	position: relative;
+	width: 60%;
+	left: 20%;
+	height: 18%;
+	border-radius: 30px;
+	background-color: white;
+	background-size: 100% 100%;
+}
+
+form {
+	text-align: center;
+	position: relative;
+	width :80%;
+	left: 10%;
+}
+
+#formulaire {
+	position: absolute;
+	background-color: white;
+	width: 30%;
+	padding-top: 1%;
+	padding-bottom: 1%;	
+	margin-top: 250px;
+	border-radius: 10px;
+	left: 35%;
+	background-image: url("../images/char.jpg");
+	background-size: 100% 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+
+#entete {
+	color: black;
+	font-size: 20px;
+	border-style: dotted;
+	border-color: green;
+	border-radius: 5px;
+	font-family: cambria;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.bouton {
+	font-family: castellar;
+	font-size: 20px;
+	color: #000000;
+	width: 200px;
+	font-weight: bold;
+}
+
+.bouton:focus {
+	background-color: #b3ff94;
+	/*animation: arcenciel 5s linear infinite;*/
+}
+
+
+.notification {
+	font-family:algerian;
+	border-radius: 5px;
+	padding-left: 5px;
+	font-size: 20px;
+	color: #0B7510;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#submit {
+	height: 80px;
+	width: 200px;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+#submit:hover {
+	border-style:solid;
+	border-color: #00CCE8;
+	background-color: #f9fc9f;
+}
+
+label {
+	color: white;
+}
+
+
+
+#identifiantbarre {
+	margin-left: 18px;
+}
+
+#motdepassebarre {
+	margin-right: 0px;
+}
